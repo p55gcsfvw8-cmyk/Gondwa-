@@ -1,6 +1,6 @@
 import './style.css';
-import { initialState, resolveTurn, serialize, deserialize } from './engine/sim';
-import type { Order, Side, State } from './engine/types';
+import { initialState, resolveTurn, serialize, deserialize } from './sim.';
+import type { Order, Side, State } from './types';
 const KEY='fractured-frontier-prototype-v2';
 let state:State=initialState();let playerSide:Side='AFG';let selected='A-INF';let destination='';let orders:Order[]=[];
 const pickFirst=()=>state.units.find(u=>u.side===playerSide)?.id??'';
